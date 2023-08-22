@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+  
+.container {
+position: relative;
+overflow: hidden;
+width: 100vw;
+height: 100vh;
+}
+
+
+.header {
+    width: 100%;
+    height: 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+}
+
+.header__logo {
+    font-size: 20px;
+    padding: 0.8rem 0 0.8rem 100px;
+    font-family: 'Alkatra', cursive;
+    font-weight: 300;
+    color: #fff;
+    
+}
+
+.nav {
+    font-size: 20px;
+    padding: 0.8rem 0 0.8rem 100px;
+    padding-left: 67%;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    font-family: 'Alkatra', cursive;
+    color: #fff;
+    text-decoration: none;  
+    margin-left: auto;
+    transition: color .2s linear;
+}
+
+.nav__link:after {
+   content: ''; 
+   width: 100%;
+   height: 3px;
+   display: block;
+
+   background-color: #aa902f;
+
+   opacity: 0;
+   
+
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1;
+
+   transition: opacity .2s linear; 
+}
+
+.nav__link:hover {
+    color: #aa902f;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #aa902f;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  height: 50vh;
+  margin: 0 auto 0 auto;
+}
+  
+.sidebar {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sidebar > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.sidebar h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.main-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container .controls button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.container .controls .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container .controls .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.imgcont {
+  background-image: url(./image/photo_2023-04-10_16-10-00-transformed.jpeg);
+}
+
+.imgcont1 {
+  background-image: url(./image/Метчик.jpeg)
+}
+
+.imgcont2 {
+  background-image: url(./image/sumitomo-tverdosplavnye-plastiny3.jpg);
+}
+
+.imgcont3{
+  background-image: url(./image/державка.png);
+}
+
+.catalog {
+  width: 90%;
+  height: 30%;
+  margin: 1% auto 1% auto;
+  display: flex;  
+  overflow: hidden;
+}
+
+.catl {
+  width: 35%; 
+  background: url(./image/hand.png)100% 50% no-repeat;
+  background-size: 100% auto;
+  margin-right: 0.5%;
+  position: relative;
+}
+
+.ahr{
+  text-decoration: none;
+  font-family: 'Alkatra', cursive;
+  color: #fff;
+  font-size: 25px;
+  transition: color .2s linear;
+  position: absolute;
+}
+
+
+.ahr:after {
+ content: ''; 
+ width: 100%;
+ height: 3px;
+ display: block;
+ background-color: #aa902f;
+ opacity: 0;
+ top: 100%;
+ left: 0;
+ z-index: 1;
+
+ transition: opacity .2s linear; 
+}
+
+.ahr:hover {
+  color: #7a6312;
+}
+
+.axr:hover:after,
+.axr.active:after {
+  opacity: 1;
+}
+
+.axr.active {
+  color: #aa902f;
+} 
+
+.catr {
+  width: 32%;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to right, #304352 0%,#d7d2cc 100%);
+  background-size: 100% 100%;
+  margin-right: 0.5%;
+}
+
+.catr2{
+  width: 32%;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+
+
+
+.innercat {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  background: #aaa;
+  margin: 0 auto 0 auto;
+}
+
+.innercat1 {
+  width: 22.5%;
+  text-align: center;
+}
+
+
+
+.footer {
+  width: 100%;
+  height: 10%;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  margin: 0;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+}
+
+
+
+
+
+
+
+
+
